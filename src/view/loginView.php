@@ -1,5 +1,5 @@
 <?php
-    require_once "../assets/php/header.php"
+    require_once "../src/assets/php/header.php"
  ?>
 
     <div class="container h-100">
@@ -26,5 +26,5 @@
     </div>
     
 <?php
-    require_once "../assets/php/footer.php"
+    require_once "../src/assets/php/footer.php"
  ?>
