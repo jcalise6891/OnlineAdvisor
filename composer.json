@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "oA\\" : "./assets/src/"
+            "App\\" : "./assets/src/"
         }
     }
 }

@@ -1,4 +1,4 @@
 /vendor/
 /node_modules/
-/assets/css/*.css
-/assets/css/*.css.map
+/src/assets/css/*.css
+/src/assets/css/*.map
