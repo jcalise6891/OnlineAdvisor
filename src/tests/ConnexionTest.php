@@ -5,8 +5,10 @@ use PHPUnit\Framework\TestCase;
 
 class ConnexionTest extends TestCase{
 
-    public function testDouble(){
+    public function testConnexion(){
 
-        $this->assertEquals(4,Connexion::double(2));
+
+
     }
+
 }

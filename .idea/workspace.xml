@@ -20,11 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83363c65-0889-44cd-a8cd-d9125b337a64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/php/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/php/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/ConnexionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ConnexionTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/indexView.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,14 +100,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="./vendor/bin/phpunit ./src/tests" />
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ConnexionTest.testDouble">
+  <component name="RunManager" selected="PHPUnit.ConnexionTest.testConnexion">
     <configuration name="ConnexionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -112,6 +115,10 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="ConnexionTest" file="$PROJECT_DIR$/src/tests/ConnexionTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ConnexionTest.testConnexion" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ConnexionTest" file="$PROJECT_DIR$/src/tests/ConnexionTest.php" method="testConnexion" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ConnexionTest.testDouble" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -125,8 +132,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ConnexionTest.testDouble" />
+        <item itemvalue="PHPUnit.ConnexionTest.testConnexion" />
         <item itemvalue="PHPUnit.ConnexionTest" />
+        <item itemvalue="PHPUnit.ConnexionTest.testDouble" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597912861490</updated>
-      <workItem from="1597912863499" duration="1113000" />
+      <workItem from="1597912863499" duration="17585000" />
     </task>
     <servers />
   </component>
@@ -172,26 +180,42 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597913365084" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1597913894067">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1597927834743">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597913894067" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1597913894067">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597927834743" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1597927834743">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597913894067" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1597913894067">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597927834743" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1597927834743">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597913894067" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1597913894067">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597927834743" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1597927834743">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597913894067" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1597913452637">
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597927834743" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1597918670480">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597913452637" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597918670480" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1597918670480">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597918670480" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1597918670480">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597918670480" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1597918670480">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597918670480" />
+    <state x="461" y="170" key="SettingsEditor" timestamp="1597924591727">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597924591727" />
     <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1597913115234">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
