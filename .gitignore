@@ -1,3 +1,4 @@
 /vendor/
 /node_modules/
-/src/assets/css/
+/src/assets/css/*.css
+/src/assets/css/*.css.map
