@@ -10,21 +10,21 @@ require_once "../assets/php/header.php"
                     <h4 class="card-title mt-2">Log In</h4>
                 </header>
                 <article class="card-body">
-                    <form class="mx-2 mb-4">
+                    <form class="mx-2 mb-4" method="post"   action="/OnlineAdvisor/src/controller/login.php">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="on" required>
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1" autocomplete="on" required>
                         </div>
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
-                        <button type="submit" class="btn btn-primary d-flex mx-auto">Submit</button>
+                        <button type="submit" name="submit" class="btn btn-primary d-flex mx-auto">Submit</button>
                     </form>
                     <div class="d-flex justify-content-center">
                         <p>Don't have an account? <a href="/OnlineAdvisor/src/view/signupView.php">Sign Up</a></p>

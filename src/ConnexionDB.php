@@ -5,7 +5,7 @@ namespace App;
 use PDO;
 
 
-class Connexion{
+class ConnexionDB{
 
     private $dsn;
     private $userName;
@@ -23,4 +23,8 @@ class Connexion{
     public function openCon(){
         return new PDO($this->dsn,$this->userName,$this->password);
     }
+
+
+
+
 }
