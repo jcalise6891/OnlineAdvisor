@@ -1,5 +1,5 @@
 <?php
-require_once "../assets/php/header.php"
+require_once './src/assets/php/header.php';
 ?>
 <div class="container">
     <div class="row justify-content-center h-100">
@@ -35,7 +35,7 @@ require_once "../assets/php/header.php"
                         <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
                     </form>
                 </article> <!-- card-body end .// -->
-                <div class="border-top card-body text-center">Have an account? <a href="/OnlineAdvisor/src/view/loginView.php">Log In</a></div>
+                <div class="border-top card-body text-center">Have an account? <a href="/OnlineAdvisor/login">Log In</a></div>
             </div> <!-- card.// -->
         </div> <!-- col.//-->
 
@@ -44,5 +44,5 @@ require_once "../assets/php/header.php"
 
 </div>
 <?php
-require_once "../assets/php/footer.php"
+require_once "./src/assets/php/footer.php"
 ?>

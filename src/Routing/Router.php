@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\router;
+namespace App\Routing;
 
 
 class Router
@@ -28,9 +28,21 @@ class Router
         $this->routes['POST'][] = $route;
     }
 
+    /**
+     * @throws RouterException in case there is no route matching.
+     */
+
     public function run(){
-        if(!isset($this->routes[$_SERVER['REQUEST_METHOD']])){
-            throw new RouterException('No routes matches');
+        if(!isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
+            throw new RouterException('REQUEST_METHOD does not exist');
         }
+        foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $route) {
+
+            if($route->match($this->url)) {
+               return $route->call();
+            }
+        }
+
+        require_once (dirname(__FILE__,2).'\assets\php\404.php');
     }
 }

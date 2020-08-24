@@ -1,5 +1,5 @@
 <?php
-require_once "../assets/php/header.php"
+require_once (dirname(__FILE__,2).'\assets\php\header.php');
 ?>
 
 <div class="container">
@@ -27,7 +27,7 @@ require_once "../assets/php/header.php"
                         <button type="submit" name="submit" class="btn btn-primary d-flex mx-auto">Submit</button>
                     </form>
                     <div class="d-flex justify-content-center">
-                        <p>Don't have an account? <a href="/OnlineAdvisor/src/view/signupView.php">Sign Up</a></p>
+                        <p>Don't have an account? <a href="/OnlineAdvisor/signup">Sign Up</a></p>
                     </div>
                     <div class="d-flex justify-content-center">
                         <a href="#">Forgot your password?</a>
@@ -40,5 +40,5 @@ require_once "../assets/php/header.php"
 </div>
 
 <?php
-require_once "../assets/php/footer.php"
+require_once (dirname(__FILE__,2).'\assets\php\footer.php');
 ?>

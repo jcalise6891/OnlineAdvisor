@@ -26,12 +26,12 @@ class User
         $query = $conDB->query($sql);
         $result = $query->fetchAll();
 
+        require_once(__DIR__.'\view\loginView.php');
+
         if(count($result) == 0){
-            require_once "../view/loginView.php";
             echo "<div class='alert alert-danger' role='alert'>Connexion Failed</div>";
         }
         else{
-            require_once "../view/loginView.php";
             echo "<div class='alert alert-success' role='alert'>Connexion Success</div>";
         }
     }
