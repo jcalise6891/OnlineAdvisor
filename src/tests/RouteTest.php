@@ -1,9 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\Routing\Route;
 use App\Routing\Router;
-use App\Routing\RouterException;
+
 
 class RouteTest extends TestCase
 {
@@ -18,7 +17,7 @@ class RouteTest extends TestCase
         return false;
     }
 
-    public function test_CannotBeAnInvalidUrl(){
+    public function testInvalidUrl(){
         $routerTest = new Router('testInvalid');
 
         $routerTest->get('/test', function(){
@@ -30,5 +29,19 @@ class RouteTest extends TestCase
         $result = $this->modified_run($routerTest);
 
         self::assertFalse($result);
+    }
+
+    public function testValidUrl(){
+        $routerTest = new Router('test');
+
+        $routerTest->get('/test', function(){
+        });
+
+        $routerTest->get('/test-2', function(){
+        });
+
+        $result = $this->modified_run($routerTest);
+
+        self::assertTrue($result);
     }
 };

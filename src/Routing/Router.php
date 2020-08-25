@@ -6,8 +6,8 @@ namespace App\Routing;
 
 class Router
 {
-    private $url;
-    private $routes = [];
+    public $url;
+    public $routes = [];
 
     /**
      * Router constructor.

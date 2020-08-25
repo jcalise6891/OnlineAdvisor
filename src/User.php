@@ -3,10 +3,7 @@
 
 namespace App;
 
-
-
 use Exception;
-use phpDocumentor\Reflection\Types\Boolean;
 
 class User
 {

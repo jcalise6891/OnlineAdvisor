@@ -13,11 +13,15 @@ class ConnexionDB{
 
     /**
      * Connexion constructor.
-     * @param $m_dsn
+     * @param $db_dsn
+     * @param $db_UserName
+     * @param $db_Password
      */
 
-    public function __construct($m_dsn){
-        $this->dsn = $m_dsn;
+    public function __construct($db_dsn,$db_UserName,$db_Password){
+        $this->dsn = $db_dsn;
+        $this->userName = $db_UserName;
+        $this->password = $db_Password;
     }
 
     public function openCon(){
