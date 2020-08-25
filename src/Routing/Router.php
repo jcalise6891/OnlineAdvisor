@@ -29,7 +29,7 @@ class Router
     }
 
     /**
-     * @throws RouterException in case there is no route matching.
+     * @throws RouterException in case there is no valid REQUEST_METHOD.
      */
 
     public function run(){

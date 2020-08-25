@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83363c65-0889-44cd-a8cd-d9125b337a64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ConnexionUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnexionDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnexionDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routing/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routing/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/RouteTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/RouteTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/UserTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +113,7 @@
       <command value="./vendor/bin/phpunit ./src/tests" />
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.RouteTest">
+  <component name="RunManager" selected="PHPUnit.UserTest">
     <configuration name="RouteTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -120,24 +121,6 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="RouteTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/src/tests/RouteTest.php" scope="Class" options="--testdox" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RouteTest.testCannotBeAnInvalidMethod" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="RouteTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/src/tests/RouteTest.php" method="testCannotBeAnInvalidMethod" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RouteTest.test_CannotBeAnInvalidMethod" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="RouteTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/src/tests/RouteTest.php" method="test_CannotBeAnInvalidMethod" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RouteTest.test_CannotBeAnInvalidUrl" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -149,17 +132,25 @@
       <TestRunner class="RouteTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/src/tests/RouteTest.php" method="test_CannotBeAnInvalidUrl" scope="Method" options="--testdox" />
       <method v="2" />
     </configuration>
-    <configuration name="RouteTest.test_run" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="RouteTest" file="$PROJECT_DIR$/src/tests/RouteTest.php" method="test_run" scope="Method" />
+    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\tests\UserTest" file="$PROJECT_DIR$/src/tests/UserTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.test_CanBeCreatedFromValidEmailAddress" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\tests\UserTest" file="$PROJECT_DIR$/src/tests/UserTest.php" method="test_CanBeCreatedFromValidEmailAddress" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.test_CannotBeInvalidMail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\tests\UserTest" file="$PROJECT_DIR$/src/tests/UserTest.php" method="test_CannotBeInvalidMail" scope="Method" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.RouteTest" />
+        <item itemvalue="PHPUnit.UserTest" />
+        <item itemvalue="PHPUnit.UserTest.test_CanBeCreatedFromValidEmailAddress" />
         <item itemvalue="PHPUnit.RouteTest.test_CannotBeAnInvalidUrl" />
-        <item itemvalue="PHPUnit.RouteTest.test_run" />
-        <item itemvalue="PHPUnit.RouteTest.test_CannotBeAnInvalidMethod" />
-        <item itemvalue="PHPUnit.RouteTest.testCannotBeAnInvalidMethod" />
+        <item itemvalue="PHPUnit.RouteTest" />
+        <item itemvalue="PHPUnit.UserTest.test_CannotBeInvalidMail" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +166,7 @@
       <workItem from="1597991926559" duration="14630000" />
       <workItem from="1598244960297" duration="9227000" />
       <workItem from="1598266539215" duration="12505000" />
-      <workItem from="1598337609810" duration="3161000" />
+      <workItem from="1598337609810" duration="11450000" />
     </task>
     <servers />
   </component>
@@ -202,10 +193,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="547" y="179" key="#CLI_Interpreters/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598267510060" />
-    <state x="586" y="203" key="#Inspections" timestamp="1598340527600">
+    <state x="586" y="203" key="#Inspections" timestamp="1598345406692">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="586" y="203" key="#Inspections/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598340527600" />
+    <state x="586" y="203" key="#Inspections/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598345406692" />
     <state x="667" y="168" key="#PHP" timestamp="1598338898301">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -234,26 +225,30 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="749" y="216" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598251340583" />
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598347816700">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598347816700" />
     <state x="663" y="315" key="FileChooserDialogImpl" timestamp="1598267497754">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="663" y="315" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598267497754" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1598340739561">
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1598349045116">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598340739561" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1598340739561">
+    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598349045116" />
+    <state width="1877" height="191" key="GridCell.Tab.0.center" timestamp="1598349045116">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598340739561" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1598340739561">
+    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598349045116" />
+    <state width="1877" height="191" key="GridCell.Tab.0.left" timestamp="1598349045116">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598340739561" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1598340739561">
+    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598349045116" />
+    <state width="1877" height="191" key="GridCell.Tab.0.right" timestamp="1598349045116">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598340739561" />
+    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598349045116" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1597935713740">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -270,10 +265,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597935713740" />
-    <state x="781" y="248" key="NewPhpClassDialog" timestamp="1598018437567">
+    <state x="781" y="248" key="NewPhpClassDialog" timestamp="1598344591970">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="781" y="248" key="NewPhpClassDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598018437567" />
+    <state x="781" y="248" key="NewPhpClassDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598344591970" />
     <state x="794" y="448" key="NewPhpFileDialog" timestamp="1598273259168">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
