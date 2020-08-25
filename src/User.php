@@ -30,9 +30,11 @@ class User
 
         if(count($result) == 0){
             echo "<div class='alert alert-danger' role='alert'>Connexion Failed</div>";
+            return false;
         }
         else{
             echo "<div class='alert alert-success' role='alert'>Connexion Success</div>";
+            return true;
         }
     }
 

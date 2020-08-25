@@ -10,7 +10,7 @@ class UserTest extends TestCase
 {
 
 
-    public function testVerificationUser(){
+    public function test_VerificationUser(){
 
 
         $this->userTest->verifyUser();

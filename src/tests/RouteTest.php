@@ -7,15 +7,28 @@ use App\Routing\RouterException;
 
 class RouteTest extends TestCase
 {
+    public function modified_run($router)
+    {
+        foreach ($router->routes['GET'] as $route) {
+
+            if ($route->match($router->url)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public function test_CannotBeAnInvalidUrl(){
-        $routerTest = new Router('InvalidTest');
+        $routerTest = new Router('testInvalid');
 
         $routerTest->get('/test', function(){
-
         });
 
-      $result = $routerTest->run();
+        $routerTest->get('/test-2', function(){
+        });
 
+        $result = $this->modified_run($routerTest);
 
+        self::assertFalse($result);
     }
 };
