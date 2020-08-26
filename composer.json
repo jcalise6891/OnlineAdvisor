@@ -9,7 +9,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "friendsofphp/php-cs-fixer": ">=v2.16.4"
+    },
     "require-dev": {
         "phpunit/phpunit": "9"
     },

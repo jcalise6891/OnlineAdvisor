@@ -1,5 +1,5 @@
 <?php
-require_once (dirname(__FILE__,2).'\assets\php\header.php');
+    require_once(dirname(__FILE__, 3).'\assets\php\header.php');
 ?>
 
 <div class="container">
@@ -40,5 +40,5 @@ require_once (dirname(__FILE__,2).'\assets\php\header.php');
 </div>
 
 <?php
-require_once (dirname(__FILE__,2).'\assets\php\footer.php');
+    require_once(dirname(__FILE__, 3).'\assets\php\footer.php');
 ?>

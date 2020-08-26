@@ -7,7 +7,8 @@
     <title>Online Advisor</title>
 
     <link rel="icon" href="/OnlineAdvisor/src/assets/img/star.ico" />
-    <link rel="stylesheet" href="/OnlineAdvisor/src/assets/css/style.css">
+    <link rel="stylesheet" href="/OnlineAdvisor/assets/css/style.css">
+    <link rel="stylesheet" href="/OnlineAdvisor/assets/css/style.css">
 </head>
 
 <body>

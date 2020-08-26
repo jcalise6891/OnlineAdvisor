@@ -1,5 +1,5 @@
 <?php
-require_once './src/assets/php/header.php';
+require_once(dirname(__FILE__, 3).'\assets\php\header.php');
 ?>
 <div class="container">
     <div class="row justify-content-center h-100">
@@ -9,28 +9,28 @@ require_once './src/assets/php/header.php';
                     <h4 class="card-title mt-2">Sign up</h4>
                 </header>
                 <article class="card-body">
-                    <form>
+                    <form method="post" action="/OnlineAdvisor/src/controller/signup.php">
                         <div class="form-row">
                             <div class="col form-group">
                                 <label>First name </label>
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" name="firstName" class="form-control" placeholder="">
                             </div> <!-- form-group end.// -->
                             <div class="col form-group">
                                 <label>Last name</label>
-                                <input type="text" class="form-control" placeholder=" ">
+                                <input type="text" name="lastName" class="form-control" placeholder=" ">
                             </div> <!-- form-group end.// -->
                         </div> <!-- form-row end.// -->
                         <div class="form-group">
                             <label>Email address</label>
-                            <input type="email" class="form-control" placeholder="">
+                            <input type="email" name="mail" class="form-control" placeholder="">
                             <small class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
                             <label>Create password</label>
-                            <input class="form-control" type="password">
+                            <input class="form-control" type="password" name="pass">
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary d-flex mx-auto"> Register </button>
+                            <button type="submit" name="submit" class="btn btn-primary d-flex mx-auto"> Register </button>
                         </div> <!-- form-group// -->
                         <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
                     </form>
@@ -44,5 +44,5 @@ require_once './src/assets/php/header.php';
 
 </div>
 <?php
-require_once "./src/assets/php/footer.php"
+require_once(dirname(__FILE__, 3).'\assets\php\footer.php');
 ?>

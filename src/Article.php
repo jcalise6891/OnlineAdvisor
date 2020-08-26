@@ -20,7 +20,8 @@ class Article
      * @throws Exception In case of GUESS WHAT ! EXCEPTION MY DUDE
      */
 
-    public function __construct(String $author, String $content, int $note,String $img = "empty"){
+    public function __construct(String $author, String $content, int $note, String $img = "empty")
+    {
         $this->verifyIsNotEmpty($author);
         $this->author = $author;
 
@@ -42,8 +43,9 @@ class Article
      * @throws Exception
      */
 
-    public static function fromString(String $author, String $content, int $note,String $img = "empty"):self{
-        return new self($author,$content,$note,$img);
+    public static function fromString(String $author, String $content, int $note, String $img = "empty"):self
+    {
+        return new self($author, $content, $note, $img);
     }
 
     /**
@@ -51,8 +53,9 @@ class Article
      * @throws Exception In case of invalid note
      */
 
-    public function verifyNote(int $note){
-        if($note < 0 || $note > 10 ){
+    public function verifyNote(int $note)
+    {
+        if ($note < 0 || $note > 10) {
             throw new Exception('The note is invalid');
         }
     }
@@ -62,8 +65,9 @@ class Article
      * @throws Exception In case of an empty string
      */
 
-    public function verifyIsNotEmpty(String $param){
-        if(strlen($param) == 0){
+    public function verifyIsNotEmpty(String $param)
+    {
+        if (strlen($param) == 0) {
             throw new Exception('Cannot be empty');
         }
     }

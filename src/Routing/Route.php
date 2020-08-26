@@ -3,7 +3,6 @@
 
 namespace App\Routing;
 
-
 class Route
 {
     private $path;
@@ -16,16 +15,18 @@ class Route
      * @param $callable
      */
 
-    public function __construct($path, $callable){
-        $this->path = trim($path,'/');
+    public function __construct($path, $callable)
+    {
+        $this->path = trim($path, '/');
         $this->callable = $callable;
     }
 
-    public function match($url){
+    public function match($url)
+    {
         $url = trim($url, "/");
-        $path = preg_replace('#:([\w]+)#', '([^/]+)',$this->path);
+        $path = preg_replace('#:([\w]+)#', '([^/]+)', $this->path);
         $regex = "#^$path$#i";
-        if(!preg_match($regex,$url,$matches)){
+        if (!preg_match($regex, $url, $matches)) {
             return false;
         }
 
@@ -33,10 +34,10 @@ class Route
 
         $this->matches = $matches;
         return true;
-
     }
 
-    public function call(){
+    public function call()
+    {
         return call_user_func_array($this->callable, $this->matches);
     }
 }
