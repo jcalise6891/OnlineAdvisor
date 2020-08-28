@@ -12,12 +12,8 @@ require_once(dirname(__FILE__, 3).'\assets\php\header.php');
                     <form method="post" action="/OnlineAdvisor/src/controller/signup.php">
                         <div class="form-row">
                             <div class="col form-group">
-                                <label>First name </label>
-                                <input type="text" name="firstName" class="form-control" placeholder="">
-                            </div> <!-- form-group end.// -->
-                            <div class="col form-group">
-                                <label>Last name</label>
-                                <input type="text" name="lastName" class="form-control" placeholder=" ">
+                                <label>Full name </label>
+                                <input type="text" name="fullName" class="form-control" placeholder="">
                             </div> <!-- form-group end.// -->
                         </div> <!-- form-row end.// -->
                         <div class="form-group">
@@ -28,11 +24,13 @@ require_once(dirname(__FILE__, 3).'\assets\php\header.php');
                         <div class="form-group">
                             <label>Create password</label>
                             <input class="form-control" type="password" name="pass">
+                            <label>Confirm password</label>
+                            <input class="form-control" type="password" name="confirmpass">
                         </div> <!-- form-group end.// -->
                         <div class="form-group">
                             <button type="submit" name="submit" class="btn btn-primary d-flex mx-auto"> Register </button>
                         </div> <!-- form-group// -->
-                        <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
+                        <small class="text-muted">By clicking the 'Register' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>
                     </form>
                 </article> <!-- card-body end .// -->
                 <div class="border-top card-body text-center">Have an account? <a href="/OnlineAdvisor/login">Log In</a></div>

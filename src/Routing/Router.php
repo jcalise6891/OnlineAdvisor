@@ -5,8 +5,9 @@ namespace App\Routing;
 
 class Router
 {
-    public $url;
-    public $routes = [];
+    private $url;
+    private $routes = [];
+    private $namedRoutes =[];
 
     /**
      * Router constructor.
@@ -17,16 +18,29 @@ class Router
         $this->url = $url;
     }
 
-    public function get($path, $callable)
+    public function get($path, $callable, $name = null)
     {
-        $route = new Route($path, $callable);
-        $this->routes['GET'][] = $route;
+        return $this->add($path, $callable, $name, 'GET');
     }
 
-    public function post($path, $callable)
+    public function post($path, $callable, $name = null)
+    {
+        return $this->add($path, $callable, $name, 'POST');
+    }
+
+    private function add($path, $callable, $name, $method)
     {
         $route = new Route($path, $callable);
-        $this->routes['POST'][] = $route;
+        $this->routes[$method][] = $route;
+
+        if (is_string($callable) && $name === null) {
+            $name = $callable;
+        }
+        if ($name) {
+            $this->namedRoutes[$name] = $route;
+        }
+
+        return $route;
     }
 
     /**
@@ -38,6 +52,7 @@ class Router
         if (!isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
             throw new RouterException('REQUEST_METHOD does not exist');
         }
+
         foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $route) {
             if ($route->match($this->url)) {
                 return $route->call();
@@ -45,5 +60,20 @@ class Router
         }
 
         require_once(dirname(__FILE__, 3).'\assets\php\404.php');
+    }
+
+    /**
+     * @param $name
+     * @param array $params
+     * @return mixed
+     * @throws RouterException
+     */
+
+    public function url($name, $params = [])
+    {
+        if (!isset($this->namedRoutes[$name])) {
+            throw new RouterException('No route matches this name');
+        }
+        return $this->namedRoutes[$name]->getUrl($params);
     }
 }

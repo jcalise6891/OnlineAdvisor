@@ -102,4 +102,17 @@ class User
             throw new Exception('FullName is Invalid');
         }
     }
+
+    public function passHash()
+    {
+        return password_hash($this->password, PASSWORD_ARGON2I);
+    }
+
+    public function passHashCompare(String $comparePass):bool
+    {
+        if (!password_verify($this->password, $comparePass)) {
+            return false;
+        }
+        return true;
+    }
 }

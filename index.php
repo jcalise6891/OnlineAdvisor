@@ -1,6 +1,7 @@
 <?php
+    session_start();
 
- require_once(dirname(__FILE__)."/vendor/autoload.php");
+    require_once(dirname(__FILE__)."/vendor/autoload.php");
     require_once(dirname(__FILE__) . "/assets/php/header.php");
 
     use App\Routing\Router;
@@ -19,9 +20,7 @@
         require_once(__DIR__.'\src\view\signupView.php');
     });
 
-    $router->get('/post/:id', function ($id) {
-        echo 'display the article number : '.$id;
-    });
+    $router->get('/post/:id', "Posts#show");
 
     $router->run();
 

@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use App\Routing\Router;
 
-class RouteTest extends TestCase
+class RouteTestNo extends TestCase
 {
     public function modified_run($router)
     {

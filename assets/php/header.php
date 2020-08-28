@@ -32,6 +32,7 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Example" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
                     <button class="btn btn-outline-primary my-2 my-sm-0 mx-2" type="button" onclick="location.href='/OnlineAdvisor/login'">Login</button>
+                    <button class="btn btn-outline-danger my-sm-0" type="button" onclick="location.href='/OnlineAdvisor/logout'" style="display:none">Logout</button>
                 </form>
             </div>
         </nav>
