@@ -22,6 +22,10 @@
 
     $router->get('/post/:id', "Posts#show");
 
+    $router->post('/login/logUser', 'Login#logUser');
+
+    $router->get('/login/logOut', 'Login#logOut');
+
     $router->run();
 
  ?>

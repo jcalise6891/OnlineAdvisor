@@ -10,7 +10,7 @@
                     <h4 class="card-title mt-2">Log In</h4>
                 </header>
                 <article class="card-body">
-                    <form class="mx-2 mb-4" method="post"   action="/OnlineAdvisor/src/controller/login.php">
+                    <form class="mx-2 mb-4" method="post"   action="/OnlineAdvisor/login/logUser">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>

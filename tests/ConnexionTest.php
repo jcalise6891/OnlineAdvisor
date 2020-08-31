@@ -1,45 +1,32 @@
 <?php
 
 use App\model\ConnexionDB;
+use App\model\ConnexionUser;
 use PHPUnit\Framework\TestCase;
+use App\User;
 
 class ConnexionTest extends TestCase
 {
-//    public function testUsernameIsInvalid()
-//    {
-//        $user = new User('test@mail.com', '12345678');
-//        $connexion = new ConnexionDB("mysql:host=localhost;dbname=online_advisor", "root", "root");
-//        $db = $connexion->openCon();
-//
-//        self::assertFalse(ConnexionUser::connectUser($user, $db));
-//    }
-//
-//    public function testUsernameIsValid()
-//    {
-//        $user = new User('julien.calise@orange.fr', '12345678');
-//        $connexion = new ConnexionDB("mysql:host=localhost;dbname=online_advisor", "root", "root");
-//        $db = $connexion->openCon();
-//
-//        self::assertTrue(ConnexionUser::connectUser($user, $db));
-//    }
-//
-//    public function testPasswordIsInvalid()
-//    {
-//        $user = new User('julien.calise@orange.fr', '12345679');
-//        $connexion = new ConnexionDB("mysql:host=localhost;dbname=online_advisor", "root", "root");
-//        $db = $connexion->openCon();
-//
-//        self::assertFalse(ConnexionUser::connectUser($user, $db));
-//    }
-//
-//    public function testPasswordIsValid()
-//    {
-//        $user = new User('julien.calise@orange.fr', '12345678');
-//        $connexion = new ConnexionDB("mysql:host=localhost;dbname=online_advisor", "root", "root");
-//        $db = $connexion->openCon();
-//
-//        self::assertTrue(ConnexionUser::connectUser($user, $db));
-//    }
+    public function testUsernameIsInvalid()
+    {
+        $userTest = $this->createMock(User::class);
+        $connexionTest = $this->createMock(ConnexionDB::class);
+        $connexionTestResult = $this->createMock(PDO::class);
+
+//        $userTest->expects($this->once())
+//            ->method('get_UserMail')
+//            ->willReturn('test@mail.com');
+
+        $connexionTest->expects($this->once())
+            ->method('openCon')
+            ->willReturn($connexionTestResult);
+
+        $dbTest = $connexionTest->openCon();
+
+        self::assertInstanceOf(PDO::class, $dbTest);
+//        self::assertFalse(ConnexionUser::connectUser($userTest, $dbTest));
+    }
+
 
     public function testDsnIsValid()
     {
@@ -55,7 +42,7 @@ class ConnexionTest extends TestCase
 
     public function testDsnIsInvalid()
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         ConnexionDB::fromString('mysql:host=localhost;dbnames=online_advisor', 'root', 'root');
     }
 }
