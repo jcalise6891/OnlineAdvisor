@@ -4,7 +4,7 @@ require_once "../../vendor/autoload.php";
 
 use App\model\ConnexionDB;
 use App\model\SignUpUser;
-use App\User;
+use App\Entity\User;
 
 class SignupController
 {

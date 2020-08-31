@@ -3,7 +3,7 @@
 use App\model\ConnexionDB;
 use App\model\ConnexionUser;
 use PHPUnit\Framework\TestCase;
-use App\User;
+use App\Entity\User;
 
 class ConnexionTest extends TestCase
 {

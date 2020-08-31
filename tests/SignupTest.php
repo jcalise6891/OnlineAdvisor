@@ -2,7 +2,7 @@
 
 
 use PHPUnit\Framework\TestCase;
-use App\User;
+use App\Entity\User;
 
 class SignupTest extends TestCase
 {

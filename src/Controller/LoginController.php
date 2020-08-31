@@ -4,7 +4,7 @@
 namespace App\Controller;
 
 use App\model\ConnexionDB;
-use App\User;
+use App\Entity\User;
 use App\model\ConnexionUser;
 
 class LoginController
@@ -36,5 +36,6 @@ class LoginController
             session_destroy();
             header('location: ../../../../OnlineAdvisor/');
         }
+        header('Location: ../../../../OnlineAdvisor/');
     }
 }

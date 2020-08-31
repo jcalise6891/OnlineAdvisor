@@ -24,7 +24,7 @@
 
     $router->post('/login/logUser', 'Login#logUser');
 
-    $router->get('/login/logOut', 'Login#logOut');
+    $router->get('/logout', 'Login#logOut');
 
     $router->run();
 

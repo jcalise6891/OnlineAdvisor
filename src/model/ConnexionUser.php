@@ -3,7 +3,7 @@
 
 namespace App\model;
 
-use App\User;
+use App\Entity\User;
 use DateTime;
 
 class ConnexionUser

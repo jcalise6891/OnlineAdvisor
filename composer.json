@@ -10,7 +10,8 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "friendsofphp/php-cs-fixer": ">=v2.16.4"
+        "friendsofphp/php-cs-fixer": ">=v2.16.4",
+      "ext-pdo": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "9"

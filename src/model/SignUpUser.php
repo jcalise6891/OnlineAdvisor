@@ -2,7 +2,7 @@
 
 namespace App\model;
 
-use App\User;
+use App\Entity\User;
 
 class SignUpUser
 {

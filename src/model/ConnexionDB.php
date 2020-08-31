@@ -2,7 +2,7 @@
 
 namespace App\model;
 
-use PDO;
+
 
 class ConnexionDB
 {
@@ -28,7 +28,7 @@ class ConnexionDB
 
     public function openCon()
     {
-        return new PDO($this->dsn, $this->userName, $this->password, [\PDO::ATTR_DEFAULT_FETCH_MODE=>\PDO::FETCH_ASSOC]);
+        return new \PDO($this->dsn, $this->userName, $this->password, [\PDO::ATTR_DEFAULT_FETCH_MODE=>\PDO::FETCH_ASSOC]);
     }
 
     public static function fromString(String $dsn, String $username, String $password)
