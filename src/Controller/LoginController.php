@@ -14,16 +14,23 @@ class LoginController
         if (isset($_POST['submit'])) {
             try {
                 $user = new User($_POST['email'], $_POST['password']);
-                $connexion = new ConnexionDB("mysql:host=localhost;dbname=online_advisor", "root", "root");
+                $connexion = new ConnexionDB(
+                    'mysql:host=localhost;dbname=online_advisor;charset=UTF8',
+                    "root",
+                    "root"
+                );
                 $db = $connexion->openCon();
                 $connexionResult = ConnexionUser::connectUser($user, $db);
                 if (!$connexionResult) {
-                    echo "Mauvais login";
+                    echo "bad login";
                     return false;
                 } else {
-                    header('Location: ../../../../OnlineAdvisor/');
+                    ConnexionUser::setLastLogin($user, $db);
+                    ConnexionUser::initSession($user);
+                    return true;
+//                    header('Location: ../../../../OnlineAdvisor/');
                 }
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 echo 'Exception : ',$e->getMessage(),"<br>";
             }
         }
@@ -31,7 +38,7 @@ class LoginController
 
     public function logOut()
     {
-        if (isset($_SESSION['userMail'])) {
+        if (isset($_SESSION['user'])) {
             session_start();
             session_destroy();
             header('location: ../../../../OnlineAdvisor/');

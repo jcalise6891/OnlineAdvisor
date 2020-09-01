@@ -10,6 +10,7 @@ class User
     private $mail;
     private $password;
     private $fullName;
+    private $isConnected = false;
 
     /**
      * User constructor.
@@ -45,6 +46,16 @@ class User
     public function get_UserFullName()
     {
         return $this->fullName;
+    }
+
+    public function set_UserFullName(String $userFullName)
+    {
+        $this->fullName = $userFullName;
+    }
+
+    public function set_Status()
+    {
+        $this->isConnected = true;
     }
 
     /**
@@ -98,7 +109,8 @@ class User
     {
         if (!isset($fullName)) {
             throw new Exception('FullName is empty');
-        } elseif (strlen($fullName) < 1 || preg_match('#^([A-Za-zÀ-ÖØ-öø-ÿ]+([ ]?[a-z]?[\'-]?[A-Za-zÀ-ÖØ-öø-ÿ]+)*)$#', $fullName) == 0) {
+        } elseif (strlen($fullName) < 1 ||
+            preg_match('#^([A-Za-zÀ-ÖØ-öø-ÿ]+([ ]?[a-z]?[\'-]?[A-Za-zÀ-ÖØ-öø-ÿ]+)*)$#', $fullName) == 0) {
             throw new Exception('FullName is Invalid');
         }
     }
@@ -114,5 +126,12 @@ class User
             return false;
         }
         return true;
+    }
+
+    public function clearPassword()
+    {
+        if ($this->isConnected) {
+            $this->password = '';
+        }
     }
 }

@@ -3,4 +3,4 @@
 /src/assets/css/*.css
 /src/assets/css/*.css.map
 /.php_cs.cache
-
+/assets/css/

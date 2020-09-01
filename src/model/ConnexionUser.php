@@ -10,38 +10,39 @@ class ConnexionUser
 {
     public static function connectUser(User $user, \PDO $db):bool
     {
-        $user_mail = $user->get_UserMail();
-
         $sql = 'SELECT *
                 FROM user
-                WHERE email = :usermail';
+                WHERE email = :userMail';
 
         $query = $db->prepare($sql, array(\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY));
-        $query->execute(array(':usermail' => $user_mail));
 
+        if ($query->execute(array(':userMail' => $user->get_UserMail()))) {
 
-        $result = $query->fetch();
+            $result = $query->fetch();
+            $user->set_UserFullName($result['fullname']);
 
-        if (count($result) == 0) {
-            return false;
-        } else {
             if ($user->passHashCompare($result['password'])) {
-                $date = new DateTime();
-                $setDateTime = $date->format('Y-m-d H:i:s');
-                $dateTimeUpdateRequest = "UPDATE user
-                                         SET lastlog = ':dateTime' 
-                                         WHERE email = ':usermail'";
-                $query = $db->prepare($dateTimeUpdateRequest, array(\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY));
-                $query->execute(array(':dateTime' => $setDateTime, ':usermail' => $user_mail));
-
-
-                $_SESSION['userMail'] = $user->get_UserMail();
-                $_SESSION['fullName'] = $user->get_UserFullName();
-
+                $user->set_Status();
                 return true;
-            } else {
-                return false;
             }
         }
+        return false;
+    }
+
+    public static function setLastLogin(User $user, \PDO $db)
+    {
+        $date = new DateTime();
+        $setDateTime = $date->format('Y-m-d H:i:s');
+        $dateTimeUpdateRequest = "UPDATE user
+                                         SET lastlog = :dateTime 
+                                         WHERE email = :userMail";
+        $query = $db->prepare($dateTimeUpdateRequest, array(\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY));
+        $query->execute(array(':dateTime' => $setDateTime, ':userMail' => $user->get_UserMail()));
+    }
+
+    public static function initSession(User $user)
+    {
+        $user->clearPassword();
+        $_SESSION['user'] = $user;
     }
 }

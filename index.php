@@ -8,9 +8,7 @@
 
     $router = new Router($_GET['url']);
 
-    $router->get('/', function () {
-        require_once('index.php');
-    });
+    $router->get('/', "Posts#showPostList");
 
     $router->get('/login', function () {
         require_once(__DIR__.'\src\view\loginView.php');
@@ -22,13 +20,23 @@
 
     $router->get('/post/:id', "Posts#show");
 
+    $router->get('/post', "Posts#showPostList");
+
     $router->post('/login/logUser', 'Login#logUser');
 
     $router->get('/logout', 'Login#logOut');
 
+try {
     $router->run();
+} catch (\Exception $e) {
+    require_once './assets/php/404.php';
+}
 
- ?>
+//echo '<pre>';
+//var_dump($_SESSION['user']);
+//echo '<pre>';
+
+?>
 
 <?php
 require_once "./assets/php/footer.php"

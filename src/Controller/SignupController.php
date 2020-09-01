@@ -19,7 +19,9 @@ class SignupController
         if (isset($_POST['submit'])) {
             if ($_POST['pass'] === $_POST['confirmpass']) {
                 $newUser = new User($_POST['mail'], $_POST['pass'], $_POST['fullName']);
-                $connexion = new ConnexionDB("mysql:host=localhost;dbname=online_advisor", "root", "root");
+                $connexion = new ConnexionDB('mysql:host=localhost;dbname=online_advisor;charset=UTF8',
+                    "root",
+                    "root");
                 $db = $connexion->openCon();
                 return SignUpUser::UserInscription($newUser, $db);
             } else {

@@ -2,8 +2,6 @@
 
 namespace App\model;
 
-
-
 class ConnexionDB
 {
     private $dsn;
@@ -28,7 +26,12 @@ class ConnexionDB
 
     public function openCon()
     {
-        return new \PDO($this->dsn, $this->userName, $this->password, [\PDO::ATTR_DEFAULT_FETCH_MODE=>\PDO::FETCH_ASSOC]);
+        return new \PDO(
+            $this->dsn,
+            $this->userName,
+            $this->password,
+            [\PDO::ATTR_DEFAULT_FETCH_MODE=>\PDO::FETCH_ASSOC]
+        );
     }
 
     public static function fromString(String $dsn, String $username, String $password)
@@ -38,7 +41,7 @@ class ConnexionDB
 
     public function verifyDsn(String $dsn)
     {
-        if ($dsn != "mysql:host=localhost;dbname=online_advisor") {
+        if ($dsn != "mysql:host=localhost;dbname=online_advisor;charset=UTF8") {
             throw new \InvalidArgumentException('DSN is invalid');
         }
     }

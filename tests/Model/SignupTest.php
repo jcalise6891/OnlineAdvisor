@@ -1,5 +1,6 @@
 <?php
 
+namespace tests\Model;
 
 use PHPUnit\Framework\TestCase;
 use App\Entity\User;

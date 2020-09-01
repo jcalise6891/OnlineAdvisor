@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoTestManager">
-    <enabled-run-configurations>
-      <run-configuration type="PHPUnitRunConfigurationType" name="Rerun Failed Tests" />
-    </enabled-run-configurations>
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,23 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83363c65-0889-44cd-a8cd-d9125b337a64" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/scss/_article.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/PostList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Controller/PostsControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Model/ConnexionDBTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OnlineAdvisor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/OnlineAdvisor.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/php/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/php/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SignupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SignupController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ConnexionDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ConnexionDB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/ConnexionUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ConnexionUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/SignUpUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SignUpUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ArticleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ArticleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/ConnexionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ConnexionTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/LoginControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/LoginControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SignupTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SignupTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/loginView.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/loginView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ArticleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/ArticleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ConnexionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Model/ConnexionUserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/RouteTest_No.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Routing/RouteTest_No.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/SignupTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Model/SignupTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/UserTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,11 +154,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\UwAmp\www\OnlineAdvisor\tests\Entity" />
+      <recent name="E:\UwAmp\www\OnlineAdvisor\tests\Model" />
+      <recent name="E:\UwAmp\www\OnlineAdvisor\tests\Routing" />
       <recent name="E:\UwAmp\www\OnlineAdvisor\src\Entity" />
       <recent name="E:\UwAmp\www\OnlineAdvisor\tests" />
-      <recent name="E:\UwAmp\www\OnlineAdvisor\src\model" />
-      <recent name="E:\UwAmp\www\OnlineAdvisor\src" />
-      <recent name="E:\UwAmp\www\OnlineAdvisor" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -172,30 +176,39 @@
       <TestRunner class="ArticleTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/ArticleTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="ConnexionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="ConnexionUserTest.testUserNameIsValid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="ConnexionTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/ConnexionTest.php" scope="Class" />
+      <TestRunner class="tests\Model\ConnexionUserTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Model/ConnexionUserTest.php" method="testUserNameIsValid" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ConnexionTest.testDsnIsInvalid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ConnexionTest" file="$PROJECT_DIR$/tests/ConnexionTest.php" method="testDsnIsInvalid" scope="Method" />
+    <configuration name="ConnexionUserTest.testUserPasswordIsInvalid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="tests\Model\ConnexionUserTest" file="$PROJECT_DIR$/tests/Model/ConnexionUserTest.php" method="testUserPasswordIsInvalid" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ConnexionTest.testDsnIsValid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="ConnexionTest" file="$PROJECT_DIR$/tests/ConnexionTest.php" method="testDsnIsValid" scope="Method" />
+    <configuration name="Model" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner directory="$PROJECT_DIR$/tests/Model" />
       <method v="2" />
     </configuration>
-    <configuration name="ConnexionTest.testUsernameIsInvalid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="RouteTestNo" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="ConnexionTest" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/ConnexionTest.php" method="testUsernameIsInvalid" scope="Method" />
+      <TestRunner class="Routing\RouteTestNo" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Routing/RouteTest_No.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RouteTestNo.testValidUrl" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Routing\RouteTestNo" coverage_engine="PHPDBG" file="$PROJECT_DIR$/tests/Routing/RouteTest_No.php" method="testValidUrl" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -210,10 +223,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.tests" />
-        <item itemvalue="PHPUnit.ConnexionTest" />
-        <item itemvalue="PHPUnit.ConnexionTest.testUsernameIsInvalid" />
-        <item itemvalue="PHPUnit.ConnexionTest.testDsnIsInvalid" />
-        <item itemvalue="PHPUnit.ConnexionTest.testDsnIsValid" />
+        <item itemvalue="PHPUnit.ConnexionUserTest.testUserNameIsValid" />
+        <item itemvalue="PHPUnit.RouteTestNo" />
+        <item itemvalue="PHPUnit.RouteTestNo.testValidUrl" />
+        <item itemvalue="PHPUnit.ConnexionUserTest.testUserPasswordIsInvalid" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +249,8 @@
       <workItem from="1598597643590" duration="8874000" />
       <workItem from="1598704252020" duration="1351000" />
       <workItem from="1598855812871" duration="338000" />
-      <workItem from="1598856175445" duration="6956000" />
+      <workItem from="1598856175445" duration="20966000" />
+      <workItem from="1598941818295" duration="17032000" />
     </task>
     <servers />
   </component>
@@ -301,26 +315,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598521701543" />
-    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1598358831516">
+    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1598877982384">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598358831516" />
+    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598877982384" />
     <state x="689" y="315" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1598016335385">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="689" y="315" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598016335385" />
-    <state x="749" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598530300042">
+    <state x="749" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598948636216">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="749" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598530300042" />
+    <state x="749" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598948636216" />
     <state x="728" y="355" width="921" height="496" key="#com.intellij.tools.ToolEditorDialog" timestamp="1598513892001">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="728" y="355" width="921" height="496" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598513892001" />
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598347816700">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598948654645">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598347816700" />
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598948654645" />
     <state x="28" y="310" key="#org.intellij.plugins.intelliLang.inject.config.ui.BaseInjectionDialog" timestamp="1598521693690">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -333,41 +347,41 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1259" y="295" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598513607572" />
-    <state width="1228" height="199" key="GridCell.Tab.0.bottom" timestamp="1598867970691">
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom" timestamp="1598964712042">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1598452800647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598452800647" />
-    <state width="1228" height="199" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598867970691" />
+    <state width="1877" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598964712042" />
     <state width="938" height="687" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1598707073318" />
-    <state width="1228" height="199" key="GridCell.Tab.0.center" timestamp="1598867970691">
+    <state width="1877" height="221" key="GridCell.Tab.0.center" timestamp="1598964712042">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1598452800647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.center.inPresentationMode/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598452800647" />
-    <state width="1228" height="199" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598867970691" />
+    <state width="1877" height="221" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598964712042" />
     <state width="938" height="687" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1598707073318" />
-    <state width="1228" height="199" key="GridCell.Tab.0.left" timestamp="1598867970691">
+    <state width="1877" height="221" key="GridCell.Tab.0.left" timestamp="1598964712042">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1598452800647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.left.inPresentationMode/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598452800647" />
-    <state width="1228" height="199" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598867970691" />
+    <state width="1877" height="221" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598964712042" />
     <state width="938" height="687" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1598707073318" />
-    <state width="1228" height="199" key="GridCell.Tab.0.right" timestamp="1598867970691">
+    <state width="1877" height="221" key="GridCell.Tab.0.right" timestamp="1598964712042">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1598452800647">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="248" key="GridCell.Tab.0.right.inPresentationMode/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598452800647" />
-    <state width="1228" height="199" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598867970691" />
+    <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598964712042" />
     <state width="938" height="687" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1598707073318" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1597935713740">
       <screen x="0" y="0" width="1920" height="1050" />
@@ -385,10 +399,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1597935713740" />
-    <state x="1175" y="259" key="NewPhpClassDialog" timestamp="1598435183563">
+    <state x="1175" y="259" key="NewPhpClassDialog" timestamp="1598872759458">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1175" y="259" key="NewPhpClassDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598435183563" />
+    <state x="1175" y="259" key="NewPhpClassDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598872759458" />
     <state x="794" y="448" key="NewPhpFileDialog" timestamp="1598601542583">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -397,10 +411,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598866714937" />
-    <state x="709" y="269" width="657" height="691" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1598865740512">
+    <state x="709" y="269" width="657" height="691" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1598948620039">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="709" y="269" width="657" height="691" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598865740512" />
+    <state x="709" y="269" width="657" height="691" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598948620039" />
     <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1598428829892">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -409,6 +423,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598515213961" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Controller/PostsControllerTest.php</url>
+          <line>7</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

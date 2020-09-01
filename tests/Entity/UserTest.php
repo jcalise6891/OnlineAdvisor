@@ -1,5 +1,7 @@
 <?php
 
+namespace Entity;
+
 use App\Entity\User;
 use PHPUnit\Framework\TestCase;
 
