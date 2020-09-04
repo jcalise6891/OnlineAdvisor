@@ -58,8 +58,7 @@ class Router
                 return $route->call();
             }
         }
-
-        require_once(dirname(__FILE__, 3).'\assets\php\404.php');
+        throw new RouterException('La page n\'existe pas');
     }
 
     /**

@@ -1,0 +1,24 @@
+{% extends 'template/layout.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- Category -->
+                <div class="single category">
+                    <h3 class="side-title">Category</h3>
+                    <ul class="list-unstyled">
+                        {% for category in Cat_list %}
+                        <li><a href="/OnlineAdvisor/category/{{category.art_category}}" title="">
+                                {{category.art_category}}
+                                <span class="pull-right"></span>
+                            </a>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{%  endblock %}

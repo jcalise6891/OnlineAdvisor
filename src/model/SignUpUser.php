@@ -19,11 +19,7 @@ class SignUpUser
             $query->bindValue(':userMail', $user_mail, \PDO::PARAM_STR);
             $query->bindValue(':userPass', $user->passHash(), \PDO::PARAM_STR);
             $query->bindValue(':userFullName', $user_fullName, \PDO::PARAM_STR);
-            $testResult =$query->execute();
-
-            var_dump($testResult);
-
-            return true;
+            return $query->execute();
         } else {
             throw new \Exception('Le mail existe déjà');
         }

@@ -1,5 +1,8 @@
 {% extends 'template/layout.html.twig' %}
 
+{% block notice %}
+{% endblock %}
+
 {% block body %}
     {% for articles in Article %}
         <div class="container my-5">
@@ -9,7 +12,12 @@
                 <h2 class="text-right">{{ articles.art_note }}</h2>
                 <div>
                     <div class="tags">
-                        <span class="btn-info"><a href="#">{{ articles.art_category }}</a></span>
+                        <span class="btn-info">
+                            <a
+                                    href="/OnlineAdvisor/category/{{ articles.art_category }}">
+                                {{ articles.art_category }}
+                            </a>
+                        </span>
                     </div>
                 </div>
                 <div class="clear"></div>

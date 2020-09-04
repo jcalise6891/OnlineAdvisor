@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Model;
+namespace App\model;
 
 use App\Entity\Article;
 

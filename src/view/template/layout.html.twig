@@ -13,7 +13,7 @@
 
 <body>
     <div class="main h-100">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <a class="navbar-brand" href="/OnlineAdvisor/">Online Advisor</a>
             <button class="navbar-toggler" type="button"
                     data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -26,7 +26,7 @@
                         <a class="nav-link" href="/OnlineAdvisor/">Home <span class="sr-only">(current)</span></a>
                    </li>
                    <li class="nav-item">
-                        <a class="nav-link" href="#">Category</a>
+                        <a class="nav-link" href="/OnlineAdvisor/category">Category</a>
                    </li>
                 </ul>
                 <span id="welcomeMessage" class="navbar-text text-light mr-auto">
@@ -57,9 +57,13 @@
                 </form>
             </div>
         </nav>
-    {% block body %}
 
+    {% block notice %}
     {% endblock %}
+
+    {% block body %}
+    {% endblock %}
+
     </div>
     <button class="btn btn-outline-primary my-2 my-sm-0 mx-2"
             type="button"
