@@ -5,6 +5,8 @@ namespace App\model;
 
 use App\Entity\User;
 use DateTime;
+use Symfony\Component\HttpFoundation\Session\Session;
+
 
 class ConnexionUser
 {
@@ -17,7 +19,6 @@ class ConnexionUser
         $query = $db->prepare($sql, array(\PDO::ATTR_CURSOR => \PDO::CURSOR_FWDONLY));
 
         if ($query->execute(array(':userMail' => $user->get_UserMail()))) {
-
             $result = $query->fetch();
             $user->set_UserFullName($result['fullname']);
 
@@ -43,6 +44,9 @@ class ConnexionUser
     public static function initSession(User $user)
     {
         $user->clearPassword();
-        $_SESSION['user'] = $user;
+
+        $session = new Session();
+        $session->start();
+        $session->set('user', $user);
     }
 }

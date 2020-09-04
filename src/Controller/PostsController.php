@@ -3,70 +3,61 @@
 namespace App\Controller;
 
 use App\model\PostList;
-use App\Entity\Article;
-use http\Exception\InvalidArgumentException;
+use Exception;
 
-class PostsController
+use Symfony\Component\HttpFoundation\Session\Session;
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+
+class PostsController extends MainController
 {
-    /**
-     * @param $id
-     * @throws \Exception if Article is invalid
-     */
+    private Environment $twig;
+    private $session;
 
-    public static function show($id)
+    public function __construct()
     {
-        $article = PostList::retrieveSinglePost($id);
-        $comments = PostList::retrieveCommentList($id); ?>
-            <div class="container my-5">
-                <div class="span8">
-                    <h1><?php echo $article->getTitle()?></h1>
-                    <p><?php echo $article->getContent()?></p>
-                    <h2 class="text-right"><?php echo $article->getNote()?></h2>
-                    <div>
-                        <div class="tags">
-                            <span class="btn-info"><a href="#"><?php echo $article->getCategory()?></a></span>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                    <hr>
-                </div>
-                    <?php
-                        foreach ($comments as $row => $innerArray) {
-                            ?>
-                            <div>
-                                <h4><?php echo $innerArray['fullname']?></h4>
-                                <p><?php echo $innerArray['com_content']?></p>
-                            </div>
-                            <?php
-                        } ?>
-             </div>
-        <?php
+        $this->twig = parent::getTwig();
+        $this->session = new Session();
     }
 
+
+    /**
+     * @param $id
+     * @throws Exception if Article is invalid
+     */
+    public function show($id)
+    {
+        $article = PostList::retrieveSinglePost($id);
+        $comments = PostList::retrieveCommentList($id);
+
+        echo $this->twig->render(
+            'post/singlePostView.html.twig',
+            ['Article' => $article , 'Comments' => $comments, 'Session'=> $this->session->all()]
+        );
+    }
+
+    /**
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
     public function showPostList()
     {
         $articles = PostList::retrievePostList();
-//        echo '<pre>';
-//        print_r($articles);
-//        echo '<pre>';
 
-        foreach ($articles as $row => $innerArray) {
-            ?>
-            <div class="container my-5">
-                <div class="span8">
-                    <h1 class="mb-5"><a href="/OnlineAdvisor/post/<?php echo $innerArray['art_ID']; ?>"><?php echo $innerArray['art_name']?></a></h1>
-                    <p><?php echo $innerArray['art_content']?></p>
-                    <h2 class="text-right"><?php echo $innerArray['art_note']?></h2>
-                    <div>
-                        <div class="tags">
-                            <span class="btn-info"><a href="#"><?php echo $innerArray['art_category']?></a></span>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                    <hr>
-                </div>
-            </div>
-            <?php
-        }
+        echo $this->twig->render('post/listPostView.html.twig', ['Article' => $articles, 'Session' => $this->session->all()]);
+    }
+
+    /**
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function showAddPost()
+    {
+        echo $this->twig->render('post/postAddView.html.twig', ['Session' => $this->session->all()]);
     }
 }

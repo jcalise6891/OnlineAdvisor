@@ -1,0 +1,20 @@
+{% extends 'template/layout.html.twig' %}
+
+{% block body %}
+    {% for articles in Article %}
+        <div class="container my-5">
+            <div class="span8">
+                <h1 class="mb-5"><a href="/OnlineAdvisor/post/{{ articles.art_ID }}">{{ articles.art_name }}</a></h1>
+                <p>{{ articles.art_content }}</p>
+                <h2 class="text-right">{{ articles.art_note }}</h2>
+                <div>
+                    <div class="tags">
+                        <span class="btn-info"><a href="#">{{ articles.art_category }}</a></span>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <hr>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -48,6 +48,11 @@ class User
         return $this->fullName;
     }
 
+    public function get_Status()
+    {
+        return $this->isConnected;
+    }
+
     public function set_UserFullName(String $userFullName)
     {
         $this->fullName = $userFullName;
@@ -58,14 +63,14 @@ class User
         $this->isConnected = true;
     }
 
-    /**
+
+        /**
      * @param String $mail
      * @param String $password
      * @param String $fullName
      * @return User
      * @throws Exception In case of Invalid Mail or Password
      */
-
     public static function fromString(String $mail, String $password, String $fullName = "Default"): self
     {
         if ($fullName == "Default") {
@@ -131,7 +136,7 @@ class User
     public function clearPassword()
     {
         if ($this->isConnected) {
-            $this->password = '';
+            $this->password = 'ThisIsNotYourPassWord';
         }
     }
 }

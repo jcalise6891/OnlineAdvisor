@@ -1,0 +1,25 @@
+{% extends 'template/layout.html.twig' %}
+
+{% block body %}
+<div class="container my-5">
+    <div class="span8">
+        <h1>{{ Article.title }}</h1>
+        <p>{{ Article.content }}</p>
+        <h2 class="text-right">{{ Article.note }}</h2>
+        <div>
+            <div class="tags">
+                <span class="btn-info"><a href="#">{{ Article.category }}</a></span>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <hr>
+    </div>
+
+    {% for key, comment in Comments %}
+    <div>
+        <h4>{{ comment.fullname }}</h4>
+        <p>{{ comment.com_content }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

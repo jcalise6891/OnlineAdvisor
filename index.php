@@ -1,22 +1,27 @@
 <?php
-    session_start();
+
 
     require_once(dirname(__FILE__)."/vendor/autoload.php");
-    require_once(dirname(__FILE__) . "/assets/php/header.php");
+
+
 
     use App\Routing\Router;
+    use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\HttpFoundation\Session\Session;
+    use App\Controller\ErrorController;
 
-    $router = new Router($_GET['url']);
+    $request = Request::createFromGlobals();
+    $url = $request->get('url');
+
+    $router = new Router($url);
 
     $router->get('/', "Posts#showPostList");
 
-    $router->get('/login', function () {
-        require_once(__DIR__.'\src\view\loginView.php');
-    });
+    $router->get('/login', "Login#get_logView");
 
-    $router->get('/signup', function () {
-        require_once(__DIR__.'\src\view\signupView.php');
-    });
+    $router->get('/signup', 'Login#get_signView');
+
+    $router->get('/postAdd', 'Posts#showAddPost');
 
     $router->get('/post/:id', "Posts#show");
 
@@ -29,15 +34,8 @@
 try {
     $router->run();
 } catch (\Exception $e) {
-    require_once './assets/php/404.php';
+
+    $error = new ErrorController();
+    $error->get404();
+
 }
-
-//echo '<pre>';
-//var_dump($_SESSION['user']);
-//echo '<pre>';
-
-?>
-
-<?php
-require_once "./assets/php/footer.php"
- ?>
